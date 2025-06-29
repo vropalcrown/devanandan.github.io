@@ -9,11 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="fade-in">
   <!-- Header -->
   <header class="header">
     <div class="container nav-container">
-      <div class="logo">Devanandan</div>
       <nav class="nav">
         <ul class="nav-list">
           <li><a href="#about" class="nav-link">About</a></li>
@@ -50,46 +49,72 @@
     </div>
   </section>
 
-  <!-- Education Section -->
+  <!-- Education Timeline Section -->
   <section id="education" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Education</h2>
-      <div class="education-grid">
-        <article class="education-card">
-          <div class="education-period">2023 – Present</div>
-          <h3 class="education-degree">BS-MS in Biology</h3>
-          <p class="education-institution">IISER Thiruvananthapuram</p>
-          <p class="education-description">Integrated program with a focus on molecular biology, genetics, and research methodologies.</p>
-        </article>
-        <article class="education-card">
-          <div class="education-period">2023</div>
-          <h3 class="education-degree">Higher Secondary</h3>
-          <p class="education-institution">Kendriya Vidyalaya No. 1, Calicut</p>
-          <p class="education-description">Class XII, Science stream. Foundation for advanced studies in biology and research.</p>
-        </article>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="education-period">2023 – Present</div>
+            <h3 class="education-degree">BS-MS in Biology</h3>
+            <p class="education-institution">IISER Thiruvananthapuram</p>
+            <p class="education-description">Integrated program with a focus on molecular biology, genetics, and research methodologies.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="education-period">2023</div>
+            <h3 class="education-degree">Higher Secondary</h3>
+            <p class="education-institution">Kendriya Vidyalaya No. 1, Calicut</p>
+            <p class="education-description">Class XII, Science stream. Foundation for advanced studies in biology and research.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section (only Programming and Research) -->
+  <!-- Skills Section with Animated Bars -->
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section-title">Skills & Interests</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3 class="skill-category-title">Programming</h3>
-          <div class="skill-list">
-            <span class="skill-item">C</span>
-            <span class="skill-item">C++</span>
-            <span class="skill-item">MATLAB</span>
+      <div class="skills-bar-grid">
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">C</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="80"></div>
           </div>
         </div>
-        <div class="skill-category">
-          <h3 class="skill-category-title">Research</h3>
-          <div class="skill-list">
-            <span class="skill-item skill-item-genetics">Genetics</span>
-            <span class="skill-item">Molecular Biology</span>
-            <span class="skill-item">Biomedical Research</span>
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">C++</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">MATLAB</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">Genetics</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill skill-item-genetics" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">Molecular Biology</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-bar-block">
+          <div class="skill-bar-label">Biomedical Research</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="60"></div>
           </div>
         </div>
       </div>
@@ -139,10 +164,11 @@
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Devanandan. Academic & Professional Portfolio.</p>
+      <div id="visitor-count" class="visitor-count">Visitors: <span id="visits">...</span></div>
     </div>
   </footer>
 
-  <!-- DNA Fluid Graphic (for Genetics hover) -->
+  <!-- DNA Fluid Graphic for Genetics Hover -->
   <div id="dna-graphic" class="dna-graphic">
     <svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="90" cy="30" rx="80" ry="25" fill="#a3c9f9" fill-opacity="0.6" filter="url(#blur)"/>
@@ -156,16 +182,31 @@
     </svg>
   </div>
 
-  <!-- Script for DNA hover effect -->
+  <!-- Scripts -->
   <script>
+    // Animated Page Transition
+    document.body.classList.add('fade-in');
+    window.addEventListener('beforeunload', function () {
+      document.body.classList.remove('fade-in');
+    });
+
+    // Animated Skill Bars
+    function animateSkillBars() {
+      document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width + '%';
+      });
+    }
+    window.addEventListener('DOMContentLoaded', animateSkillBars);
+
+    // DNA hover effect for Genetics
     const geneticsSkill = document.querySelector('.skill-item-genetics');
     const dnaGraphic = document.getElementById('dna-graphic');
-
     if (geneticsSkill && dnaGraphic) {
       geneticsSkill.addEventListener('mouseenter', (e) => {
         const rect = geneticsSkill.getBoundingClientRect();
         dnaGraphic.style.left = (rect.left + window.scrollX - 40) + 'px';
-        dnaGraphic.style.top = (rect.top + window.scrollY - 40) + 'px';
+        dnaGraphic.style.top = (rect.top + window.scrollY - 70) + 'px';
         dnaGraphic.style.opacity = 1;
         dnaGraphic.style.transform = 'scale(1)';
       });
@@ -174,6 +215,16 @@
         dnaGraphic.style.transform = 'scale(0.95)';
       });
     }
+
+    // Visitor Counter (using countapi.xyz)
+    fetch('https://api.countapi.xyz/hit/devanandan-portfolio/visits')
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('visits').textContent = res.value;
+      })
+      .catch(() => {
+        document.getElementById('visits').textContent = 'N/A';
+      });
   </script>
 </body>
 </html>
