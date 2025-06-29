@@ -102,9 +102,14 @@ body {
   border: 3px solid #fff;
   background: #fff;
 }
-.hero-title {
-  font-size: 2.3rem;
+.hero-name {
   font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+.hero-title {
+  font-size: 2rem;
+  font-weight: 600;
   color: #222;
   margin-bottom: 14px;
 }
@@ -126,6 +131,9 @@ body {
   .hero-photo {
     width: 100px;
     height: 100px;
+  }
+  .hero-name {
+    font-size: 2rem;
   }
   .hero-title {
     font-size: 1.7rem;
@@ -188,6 +196,13 @@ body {
   align-items: flex-start;
   margin-bottom: 40px;
   position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 .timeline-dot {
   width: 18px;
@@ -220,63 +235,6 @@ body {
   .timeline-content {
     padding: 14px 10px;
   }
-}
-
-/* Animated Skill Bars */
-.skills-bar-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-}
-.skill-bar-block {
-  margin-bottom: 10px;
-}
-.skill-bar-label {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #375a7f;
-}
-.skill-bar-bg {
-  width: 100%;
-  height: 18px;
-  background: #eaeaea;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-}
-.skill-bar-fill {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #0073e6 60%, #a3c9f9 100%);
-  border-radius: 12px;
-  transition: width 1.3s cubic-bezier(.4,2.3,.3,1);
-}
-.skill-item-genetics.skill-bar-fill {
-  position: relative;
-  z-index: 2;
-}
-@media (max-width: 900px) {
-  .skills-bar-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-}
-
-/* DNA Fluid Graphic for Genetics Hover */
-.dna-graphic {
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.35s, transform 0.35s;
-  left: 0;
-  top: 0;
-  width: 180px;
-  height: 60px;
-  filter: blur(2px) drop-shadow(0 4px 20px #0073e6aa);
-  will-change: opacity, transform;
-  pointer-events: none;
 }
 
 /* Projects */
