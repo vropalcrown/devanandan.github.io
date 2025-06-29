@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devanandan</title>
-  <link rel="stylesheet" href="style.css">
   <meta name="description" content="Devanandan, 2nd Year BSMS Biology Student at IISER Thiruvananthapuram. Portfolio showcasing education, skills, and projects.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Loader (Optional) -->
   <div class="loader"></div>
 
   <!-- Header -->
-  <header class="header">
+  <header class="header glass">
     <div class="container">
       <h1 class="logo">Devanandan</h1>
       <nav class="nav">
@@ -25,23 +31,28 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+      <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="container">
       <div class="hero-content">
-        <img src="your-photo.jpg" alt="Devanandan" class="hero-photo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block;">
-        <h1 class="hero-title">Devanandan</h1>
+        <img src="your-photo.jpg" alt="Devanandan" class="hero-photo">
+        <h1 class="hero-title"></h1>
         <p class="hero-subtitle">2nd Year BSMS Biology Student at IISER Thiruvananthapuram</p>
-        <p class="hero-description">Passionate about genetics, molecular biology, and scientific research. Exploring the intersection of biology and technology to understand life at the molecular level.</p>
+        <p class="hero-description">
+          Passionate about genetics, molecular biology, and scientific research. Exploring the intersection of biology and technology to understand life at the molecular level.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">About</h2>
@@ -57,19 +68,19 @@
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="section section-alt">
+  <section id="education" class="section section-alt" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Education</h2>
       </div>
       <div class="education-grid">
-        <article class="education-card">
+        <article class="education-card glass">
           <div class="education-period">2023 – Present</div>
           <h3 class="education-degree">Bachelor & Master of Science in Biology</h3>
           <p class="education-institution">Indian Institute of Science Education and Research (IISER), Thiruvananthapuram</p>
           <p class="education-description">Integrated BS-MS program focusing on comprehensive biological sciences education, including molecular biology, genetics, biochemistry, and advanced research methodologies.</p>
         </article>
-        <article class="education-card">
+        <article class="education-card glass">
           <div class="education-period">2023</div>
           <h3 class="education-degree">Higher Secondary Education</h3>
           <p class="education-institution">Kendriya Vidyalaya No. 1, Calicut</p>
@@ -80,13 +91,13 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section">
+  <section id="skills" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Skills & Expertise</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="skill-category glass">
           <h3 class="skill-category-title">Programming</h3>
           <div class="skill-list">
             <span class="skill-item">C</span>
@@ -94,7 +105,7 @@
             <span class="skill-item">MATLAB</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category glass">
           <h3 class="skill-category-title">Laboratory</h3>
           <div class="skill-list">
             <span class="skill-item">Lab Techniques</span>
@@ -102,7 +113,7 @@
             <span class="skill-item">Data Analysis</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category glass">
           <h3 class="skill-category-title">Core Competencies</h3>
           <div class="skill-list">
             <span class="skill-item">Critical Thinking</span>
@@ -110,7 +121,7 @@
             <span class="skill-item">Research Methodology</span>
           </div>
         </div>
-        <div class="skill-category">
+        <div class="skill-category glass">
           <h3 class="skill-category-title">Research Interests</h3>
           <div class="skill-list">
             <span class="skill-item">Genetics</span>
@@ -123,13 +134,13 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section section-alt">
+  <section id="projects" class="section section-alt" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Projects</h2>
       </div>
       <div class="projects-content">
-        <div class="projects-placeholder">
+        <div class="projects-placeholder glass">
           <h3>Research in Progress</h3>
           <p>Currently developing research projects in molecular biology and genetics. This section will be updated with completed work and ongoing research initiatives as I advance through my academic program.</p>
           <p>Focus areas include computational biology applications, laboratory research methodologies, and interdisciplinary approaches to biological problems.</p>
@@ -139,24 +150,24 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Get in Touch</h2>
       </div>
       <div class="contact-grid">
-        <div class="contact-card">
-          <h3 class="contact-title">Email</h3>
+        <div class="contact-card glass">
+          <h3 class="contact-title"><i class="fa-solid fa-envelope"></i> Email</h3>
           <a href="mailto:youremail@iisertvm.ac.in" class="contact-link">youremail@iisertvm.ac.in</a>
           <p class="contact-description">For academic discussions, collaboration opportunities, or research inquiries.</p>
         </div>
-        <div class="contact-card">
-          <h3 class="contact-title">LinkedIn</h3>
+        <div class="contact-card glass">
+          <h3 class="contact-title"><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
           <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/yourprofile</a>
           <p class="contact-description">Connect professionally and stay updated on my academic journey.</p>
         </div>
-        <div class="contact-card">
-          <h3 class="contact-title">Institution</h3>
+        <div class="contact-card glass">
+          <h3 class="contact-title"><i class="fa-solid fa-building-columns"></i> Institution</h3>
           <div class="contact-address">
             <p>IISER Thiruvananthapuram</p>
             <p>School of Biology</p>
@@ -169,17 +180,45 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer glass">
     <div class="container">
       <p>&copy; 2025 Devanandan. Designed for academic and professional networking.</p>
     </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <a href="#" class="back-to-top">↑</a>
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+  <!-- Floating Contact Button -->
+  <a href="#contact" class="fab-contact" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
 
   <!-- Scripts -->
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Typed.js for typing animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
+    // Loader
+    window.addEventListener('load', () => {
+      document.querySelector('.loader').style.display = 'none';
+    });
+
+    // AOS Animation
+    AOS.init({
+      once: true,
+      duration: 800,
+      offset: 60,
+    });
+
+    // Typed.js for hero title
+    new Typed('.hero-title', {
+      strings: ["Devanandan", "Biology Student", "Aspiring Researcher"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true,
+      showCursor: true,
+    });
+
     // Back to Top Button
     const backToTop = document.querySelector('.back-to-top');
     window.addEventListener('scroll', () => {
@@ -190,10 +229,23 @@
       }
     });
 
-    // Remove Loader (Optional)
-    window.addEventListener('load', () => {
-      document.querySelector('.loader').style.display = 'none';
-    });
+    // Dark Mode Toggle
+    const darkToggle = document.getElementById('darkModeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
+      document.body.classList.add('dark-mode');
+      darkToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+    darkToggle.onclick = function() {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')){
+        localStorage.setItem('theme', 'dark');
+        darkToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      } else {
+        localStorage.setItem('theme', 'light');
+        darkToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    };
   </script>
 </body>
 </html>
