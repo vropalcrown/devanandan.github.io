@@ -3,38 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devanandan</title>
+  <title>Devanandan K C - Biology Researcher</title>
   <meta name="description" content="Devanandan, 2nd Year BSMS Biology Student at IISER Thiruvananthapuram. Portfolio showcasing education, skills, and projects.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="fade-in">
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- Header -->
-  <header class="header">
+  <header class="header" id="header">
     <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-icon">🧬</span>
+        <span class="logo-text">Devanandan</span>
+      </div>
       <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-list" id="navList">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-background">
+      <div class="dna-helix"></div>
+      <div class="particles" id="particles"></div>
+    </div>
     <div class="container hero-container">
-      <img src="your-photo.jpg" alt="Devanandan K C" class="hero-photo">
-      <div>
-        <h1 class="hero-name">Devanandan K C</h1>
-        <h2 class="hero-title">Exploring Life at the Molecular Level</h2>
-        <p class="hero-subtitle">2nd Year BSMS Biology Student, IISER Thiruvananthapuram</p>
-        <p class="hero-description">
-          Passionate about genetics, molecular biology, and scientific research. I enjoy bridging biology and technology to uncover the secrets of life.
-        </p>
+      <div class="hero-content">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-border"></div>
+          <img src="your-photo.jpg" alt="Devanandan K C" class="hero-photo">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for Research
+          </div>
+        </div>
+        <div class="hero-text">
+          <div class="hero-greeting">Hello, I'm</div>
+          <h1 class="hero-name">
+            <span class="name-part">Devanandan</span>
+            <span class="name-part">K C</span>
+          </h1>
+          <h2 class="hero-title">
+            <span class="typing-text" id="typingText"></span>
+            <span class="cursor">|</span>
+          </h2>
+          <p class="hero-subtitle">
+            <i class="fas fa-graduation-cap"></i>
+            2nd Year BSMS Biology Student @ IISER Thiruvananthapuram
+          </p>
+          <p class="hero-description">
+            Passionate about genetics, molecular biology, and scientific research. I enjoy bridging biology and technology to uncover the secrets of life.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get in Touch
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fas fa-flask"></i>
+              View Research
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="mailto:devanandan24@iisertvm.ac.in" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/devanandan-kc-56450331b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Google Scholar">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="scroll-text">Scroll to explore</div>
       </div>
     </div>
   </section>
@@ -42,34 +109,230 @@
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="about-text">
-        I am a dedicated student with a deep curiosity for how living systems work. My academic path at IISER Thiruvananthapuram combines rigorous coursework with hands-on research, especially in genetics and molecular biology. I thrive on interdisciplinary challenges and am always eager to apply computational tools to biological questions.
-      </p>
+      <div class="section-header">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="about-text">
+            I am a dedicated student with a deep curiosity for how living systems work. My academic path at IISER Thiruvananthapuram combines rigorous coursework with hands-on research, especially in genetics and molecular biology.
+          </p>
+          <p class="about-text">
+            I thrive on interdisciplinary challenges and am always eager to apply computational tools to biological questions. My goal is to contribute to cutting-edge research that advances our understanding of life at the molecular level.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-microscope"></i>
+              <div>
+                <h4>Research Focus</h4>
+                <p>Molecular Biology & Genetics</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <h4>Technical Skills</h4>
+                <p>Computational Biology Tools</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-brain"></i>
+              <div>
+                <h4>Approach</h4>
+                <p>Interdisciplinary Problem Solving</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Years of Study</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔬</div>
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Courses Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🧪</div>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Lab Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💡</div>
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">Hours of Research</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Education Timeline Section -->
   <section id="education" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Education</h2>
+      <div class="section-header">
+        <span class="section-label">My journey</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-underline"></div>
+      </div>
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-ring"></div>
+          </div>
           <div class="timeline-content">
-            <div class="education-period">2024 – Present</div>
+            <div class="timeline-badge">Current</div>
+            <div class="education-period">
+              <i class="far fa-calendar"></i>
+              2024 – Present
+            </div>
             <h3 class="education-degree">BS-MS in Biology</h3>
-            <p class="education-institution">IISER Thiruvananthapuram</p>
-            <p class="education-description">Integrated program with a focus on molecular biology, genetics, and research methodologies.</p>
+            <p class="education-institution">
+              <i class="fas fa-university"></i>
+              IISER Thiruvananthapuram
+            </p>
+            <p class="education-description">
+              Integrated program with a focus on molecular biology, genetics, and research methodologies. Engaging in coursework that spans biochemistry, cell biology, and computational approaches to biological problems.
+            </p>
+            <div class="education-tags">
+              <span class="tag">Molecular Biology</span>
+              <span class="tag">Genetics</span>
+              <span class="tag">Research Methods</span>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-ring"></div>
+          </div>
           <div class="timeline-content">
-            <div class="education-period">2023</div>
-            <h3 class="education-degree">Higher Secondary</h3>
-            <p class="education-institution">Kendriya Vidyalaya No. 1, Calicut</p>
-            <p class="education-description">Class XII, Science stream. Foundation for advanced studies in biology and research.</p>
+            <div class="education-period">
+              <i class="far fa-calendar"></i>
+              2023
+            </div>
+            <h3 class="education-degree">Higher Secondary Education</h3>
+            <p class="education-institution">
+              <i class="fas fa-school"></i>
+              Kendriya Vidyalaya No. 1, Calicut
+            </p>
+            <p class="education-description">
+              Class XII, Science stream. Built a strong foundation in biology, chemistry, and physics, preparing for advanced studies in biological sciences.
+            </p>
+            <div class="education-tags">
+              <span class="tag">Biology</span>
+              <span class="tag">Chemistry</span>
+              <span class="tag">Physics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I bring</span>
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="category-icon">🧬</div>
+          <h3 class="category-title">Biological Sciences</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Molecular Biology</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Genetics</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Cell Biology</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Biochemistry</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-icon">💻</div>
+          <h3 class="category-title">Computational Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">R Programming</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Data Analysis</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Bioinformatics</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="60"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="category-icon">🔬</div>
+          <h3 class="category-title">Laboratory Skills</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">PCR & Gel Electrophoresis</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Microscopy</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Cell Culture</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Spectroscopy</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="65"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -79,12 +342,76 @@
   <!-- Projects Section -->
   <section id="projects" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-content">
-        <div class="projects-placeholder">
-          <h3>Research in Progress</h3>
-          <p>Developing projects in molecular biology and genetics. Updates will be added as my academic journey progresses.</p>
+      <div class="section-header">
+        <span class="section-label">My work</span>
+        <h2 class="section-title">Projects & Research</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-dna"></i>
+            </div>
+            <div class="project-overlay">
+              <span class="project-status">In Progress</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Molecular Biology Research</h3>
+            <p class="project-description">
+              Exploring gene expression patterns and regulatory mechanisms in cellular systems. Focus on understanding molecular pathways.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Genetics</span>
+              <span class="tag">Lab Work</span>
+            </div>
+          </div>
         </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="project-overlay">
+              <span class="project-status">Upcoming</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Bioinformatics Analysis</h3>
+            <p class="project-description">
+              Developing computational pipelines for genomic data analysis. Applying machine learning to biological datasets.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Data Science</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-placeholder">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="project-overlay">
+              <span class="project-status">Planning</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Cell Biology Studies</h3>
+            <p class="project-description">
+              Investigating cellular mechanisms and protein interactions. Focus on experimental techniques and data interpretation.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Cell Biology</span>
+              <span class="tag">Microscopy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects-note">
+        <i class="fas fa-info-circle"></i>
+        Projects and research work will be updated as my academic journey progresses
       </div>
     </div>
   </section>
@@ -92,23 +419,47 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3 class="contact-title">Email</h3>
-          <a href="mailto:youremail@iisertvm.ac.in" class="contact-link">devanandan24@iisertvm.ac.in</a>
+      <div class="section-header">
+        <span class="section-label">Let's connect</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-intro">
+          <p>I'm always open to discussing research opportunities, collaborations, or just having a conversation about science. Feel free to reach out!</p>
         </div>
-        <div class="contact-card">
-          <h3 class="contact-title">LinkedIn</h3>
-          <a href="linkedin.com/in/devanandan-kc-56450331b" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/yourprofile</a>
-        </div>
-        <div class="contact-card">
-          <h3 class="contact-title">Institution</h3>
-          <div class="contact-address">
-            <p>IISER Thiruvananthapuram</p>
-            <p>School of Biology</p>
-            <p>Vithura, Thiruvananthapuram</p>
-            <p>Kerala 695551, India</p>
+        <div class="contact-grid">
+          <div class="contact-card" data-aos="zoom-in">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="contact-title">Email</h3>
+            <a href="mailto:devanandan24@iisertvm.ac.in" class="contact-link">
+              devanandan24@iisertvm.ac.in
+            </a>
+            <p class="contact-hint">Best way to reach me</p>
+          </div>
+          <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <h3 class="contact-title">LinkedIn</h3>
+            <a href="https://linkedin.com/in/devanandan-kc-56450331b" target="_blank" rel="noopener noreferrer" class="contact-link">
+              Connect with me
+            </a>
+            <p class="contact-hint">Professional network</p>
+          </div>
+          <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="contact-title">Location</h3>
+            <div class="contact-address">
+              <p>IISER Thiruvananthapuram</p>
+              <p>Vithura, Kerala 695551</p>
+              <p>India</p>
+            </div>
+            <p class="contact-hint">Campus location</p>
           </div>
         </div>
       </div>
@@ -118,46 +469,62 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Devanandan. Academic & Professional Portfolio.</p>
-      <div id="visitor-count" class="visitor-count">Visitors: <span id="visits">...</span></div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">🧬</span>
+            <span>Devanandan K C</span>
+          </div>
+          <p class="footer-tagline">Exploring life at the molecular level</p>
+          <div class="footer-social">
+            <a href="mailto:devanandan24@iisertvm.ac.in" class="footer-social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/devanandan-kc-56450331b" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 class="footer-heading">Stats</h4>
+          <div class="visitor-stats">
+            <div class="visitor-item">
+              <i class="fas fa-eye"></i>
+              <span>Visitors: <strong id="visits">...</strong></span>
+            </div>
+            <div class="visitor-item">
+              <i class="fas fa-calendar"></i>
+              <span>Last updated: April 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Devanandan K C. All rights reserved.</p>
+        <p class="footer-made">Made with <i class="fas fa-heart"></i> for science</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <!-- Scripts -->
-  <script>
-    // Animated Page Transition
-    document.body.classList.add('fade-in');
-    window.addEventListener('beforeunload', function () {
-      document.body.classList.remove('fade-in');
-    });
-
-    // Visitor Counter (using countapi.xyz)
-    fetch('https://api.countapi.xyz/hit/devanandan-portfolio/visits')
-      .then(res => res.json())
-      .then(res => {
-        document.getElementById('visits').textContent = res.value;
-      })
-      .catch(() => {
-        document.getElementById('visits').textContent = 'N/A';
-      });
-
-    // Animate timeline items on scroll
-    function animateTimeline() {
-      const items = document.querySelectorAll('.timeline-item');
-      const triggerBottom = window.innerHeight * 0.85;
-
-      items.forEach(item => {
-        const itemTop = item.getBoundingClientRect().top;
-        if (itemTop < triggerBottom) {
-          item.classList.add('visible');
-        } else {
-          item.classList.remove('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', animateTimeline);
-    window.addEventListener('load', animateTimeline);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
